@@ -1,0 +1,36 @@
+{
+  "name": "openeb",
+  "version": "5.0.0",
+  "dependencies": [
+    "boost",
+    "glfw3",
+    {
+      "name": "hdf5",
+      "features": [
+        "cpp"
+      ]
+    },
+    {
+      "name": "libusb",
+      "features": [
+        "udev"
+      ]
+    },
+    {
+      "name": "opencv",
+      "default-features": false
+    },
+    {
+      "name": "opencv4",
+      "default-features": false,
+      "features": [
+        "calib3d",
+        "highgui",
+        "jpeg",
+        "png"
+      ]
+    },
+    "protobuf",
+    "pybind11"
+  ]
+}

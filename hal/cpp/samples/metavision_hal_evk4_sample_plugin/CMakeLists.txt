@@ -34,7 +34,7 @@ target_include_directories(hal_evk4_sample_plugin
 target_link_libraries(hal_evk4_sample_plugin
     PUBLIC
         metavision_hal
-        libusb-1.0
+        PkgConfig::libusb
 )
 
 # Instead of setting the RUNTIME/LIBRARY_OUTPUT_DIRECTORY property on the target, we manually copy

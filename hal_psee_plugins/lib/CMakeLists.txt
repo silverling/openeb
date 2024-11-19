@@ -27,7 +27,7 @@ set_target_properties(metavision_psee_hw_layer_obj
 
 target_link_libraries(metavision_psee_hw_layer_obj
     PUBLIC
-        libusb-1.0
+        PkgConfig::libusb
 )
 
 target_include_directories(metavision_psee_hw_layer_obj
@@ -143,7 +143,7 @@ foreach(lib_obj ${lib_obj_list})
     target_link_libraries(${lib_obj}
         PUBLIC
             metavision_hal
-            libusb-1.0
+            PkgConfig::libusb
             metavision_psee_hw_layer
     )
     target_include_directories(${lib_obj}

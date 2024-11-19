@@ -204,7 +204,8 @@ set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
 
 # LibUSB
-find_package(LibUSB REQUIRED)
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(libusb REQUIRED IMPORTED_TARGET libusb-1.0)
 
 # Boost
 set (boost_components_to_find program_options timer chrono thread)
@@ -221,7 +222,7 @@ find_package(OpenCV COMPONENTS core highgui imgproc videoio imgcodecs calib3d ob
 
 # HDF5
 if (NOT ANDROID AND NOT HDF5_DISABLED)
-    find_package(HDF5 1.10.2 COMPONENTS CXX)
+    find_package(HDF5 1.14.4 COMPONENTS CXX)
     if (HDF5_FOUND AND WIN32)
         LIST(APPEND HDF5_DEFINITIONS H5_BUILT_AS_DYNAMIC_LIB)
     endif ()

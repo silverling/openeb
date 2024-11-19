@@ -12,7 +12,7 @@ add_executable(metavision_cx3_updater
     ${PROJECT_SOURCE_DIR}/hal_psee_plugins/src/boards/utils/utils_fx3_ram_flash.cpp
     ${PROJECT_SOURCE_DIR}/hal_psee_plugins/src/devices/others/i2c_eeprom.cpp
 )
-target_link_libraries(metavision_cx3_updater PRIVATE MetavisionSDK::base Boost::program_options libusb-1.0)
+target_link_libraries(metavision_cx3_updater PRIVATE MetavisionSDK::base Boost::program_options PkgConfig::libusb)
 target_include_directories(metavision_cx3_updater 
     PRIVATE
         $<TARGET_PROPERTY:metavision_hal_psee_plugin_obj,INTERFACE_INCLUDE_DIRECTORIES>
