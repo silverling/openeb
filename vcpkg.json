@@ -1,8 +1,10 @@
 {
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
   "name": "openeb",
   "version": "5.0.0",
   "dependencies": [
     "boost",
+    "glew",
     "glfw3",
     {
       "name": "hdf5",
@@ -15,10 +17,6 @@
       "features": [
         "udev"
       ]
-    },
-    {
-      "name": "opencv",
-      "default-features": false
     },
     {
       "name": "opencv4",
